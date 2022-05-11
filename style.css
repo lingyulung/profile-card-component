@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+body {
+  background-color: var(--darkCyan);
+  /* background-image: url(images/bg-pattern-top.svg); */
+}
+
+body p {
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--darkGrayishBlue);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.topBgImg {
+  position: fixed;
+  top: -100%;
+  left: -190%;
+}
+
+.bottomBgImg {
+  position: fixed;
+  bottom: -100%;
+  right: -190%;
+}
+
+.cardContainer {
+  min-width: 80%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.cardTop {
+  width: 100%;
+  height: 8rem;
+  background-image: url(images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+
+.profilePicBg {
+  height: 30%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.profilePicFrame {
+  width: 39%;
+  height: 6.5rem;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .profilePic {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+} */
+
+.imgContainer {
+  width: 7.5rem;
+  height: 7.5rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePic {
+  width: 7rem;
+  height: 7rem;
+  /* position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  border-radius: 50%;
+  /* border: 5px solid white;
+  display: flex; */
+}
+
+.nameAndAge {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--veryDarkDesaturatedBlue);
+  margin-right: 0.7rem;
+}
+
+.location {
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.line {
+  width: 100%;
+  height: 0.1px;
+  background-color: var(--darkGray);
+  opacity: 30%;
+  margin-bottom: 1.5rem;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+
+.numAndTitle {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.num {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--veryDarkDesaturatedBlue);
+  margin-bottom: 0.3rem;
+}
+
+.title {
+  font-size: 13px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* FOR LARGER PHONE SCREENS */
+@media only screen and (min-width: 439px) {
+  .cardContainer {
+    min-width: 60%;
+  }
+}
+
+/* FOR TABLETS SCREENS */
+@media only screen and (min-width: 600px) {
+  .cardContainer {
+    min-width: 50%;
+  }
+}
+
+/* FOR LARGER TABLETS SCREENS */
+@media only screen and (min-width: 700px) {
+  .cardContainer {
+    min-width: 40%;
+  }
+}
+
+/* FOR EVEN LARGER TABLETS OR SMALL LAPTOP/DESKTOP SCREENS*/
+@media only screen and (min-width: 875px) {
+  .cardContainer {
+    min-width: 30%;
+  }
+}
+
+/* FOR MEDIUM SIZED LAPTOPS/DESKTOP SCREENS */
+@media only screen and (min-width: 1170px) {
+  .cardContainer {
+    min-width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .cardContainer {
+    min-width: 20%;
+  }
+}
